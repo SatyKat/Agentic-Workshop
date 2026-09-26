@@ -1,0 +1,13 @@
+stories:
+  - id: epic-1-story-1
+    title: Triage Schema
+    description: Define the triage-decision JSON schema with category (billing|bug|access|performance|how-to), priority (P1-P4), route (team-specific), and rationale (one sentence). Implement validation that accepts valid decisions and rejects invalid ones with a clear error.
+    spec_ref: CAP-1
+    depends_on: []
+
+  - id: epic-1-story-2
+    title: Seed Data Loader
+    description: Implement load_seed.py to read seed/tickets.csv and seed/customers.csv, create app.db, and populate tickets and customers tables. The loader must be idempotent (running twice produces identical database).
+    spec_ref: CAP-2
+    depends_on:
+      - epic-1-story-1
